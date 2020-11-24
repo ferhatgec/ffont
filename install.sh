@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo c++ Default.cpp FFont.cpp -o /bin/ffont 
+sudo c++ -I./include/ -I./fonts/ ./src/Default.cpp ./src/FFont.cpp -o /bin/ffont 

@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <string>
-#include "fonts/Default.hpp"
+#include <Default.hpp>
 
 /*
 	 - Default font of Fegeya FFont

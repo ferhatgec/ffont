@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include <string>
-#include "fonts/Default.hpp"
+#include <Default.hpp>
 
 static inline std::string STR(const char* _ch) {
 	return (std::string)_ch;

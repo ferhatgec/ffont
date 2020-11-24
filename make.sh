@@ -1,3 +1,3 @@
 #!/bin/sh
 
-c++ Default.cpp FFont.cpp -o ffont && ./ffont --d test 
+c++ -I./include/ -I./fonts/ ./src/Default.cpp ./src/FFont.cpp -o ffont 

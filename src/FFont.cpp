@@ -9,9 +9,8 @@
 #include <string>
 #include <sstream>
 
-#include "FFont.hpp"
-
-#include "fonts/Default.hpp"
+#include <FFont.hpp>
+#include <Default.hpp>
 
 std::string
 FFont::GetSpecificLine(const std::string& font, unsigned __line) {	
