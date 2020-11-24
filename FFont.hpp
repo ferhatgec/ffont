@@ -12,6 +12,11 @@
 #include <string>
 #include "fonts/Default.hpp"
 
+static inline std::string STR(const char* _ch) {
+	return (std::string)_ch;
+}
+
+
 class FFont {
 public:
 	void Generate(ffont_default_t &font, std::string text); 

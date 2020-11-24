@@ -140,6 +140,10 @@ FFont::Generate(ffont_default_t &font, std::string text) {
 				case 'z':
 					generated_text.append(GetSpecificLine(font.z, line) + " ");
 					break;
+				
+				case ' ':
+					generated_text.append("  ");
+					break;
 					
 				default:			
 					break;
@@ -156,18 +160,25 @@ FFont::Generate(ffont_default_t &font, std::string text) {
 void HelpFunction(char* argument) {
 	std::cout << "Fegeya FFont - Generate ASCII arts!\n" 	      <<
 				 "Usage: " << argument << " [option] text\n----\n" <<
-				 argument << " [--d --default] text\n";
+				 argument << " [--d --default] text\n" <<
+				 argument << " [--d --default] text text1 text2 : Multiple texts\n";
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv) {	
 	if(argc < 3) {
 		HelpFunction(argv[0]);
 		return 0;
 	}
 	
 	std::string font(argv[1]);
-	std::string text(argv[2]);
+	std::string text;	
 	
+
+	for (auto i = int{2}; i < argc; ++i) {
+        text.append(argv[i]);
+        text.append(" ");
+    }
+    
 	if(font == "--d" || font == "--default") {
 		FFont_Default font;
 		FFont gen;
