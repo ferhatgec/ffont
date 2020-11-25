@@ -10,6 +10,9 @@
 #include <sstream>
 
 #include <FFont.hpp>
+
+/* Fonts */
+#include <ANSI_Regular.hpp>
 #include <Default.hpp>
 
 std::string
@@ -159,8 +162,11 @@ FFont::Generate(ffont_default_t &font, std::string text) {
 void HelpFunction(char* argument) {
 	std::cout << "Fegeya FFont - Generate ASCII arts!\n" 	      <<
 				 "Usage: " << argument << " [option] text\n----\n" <<
-				 argument << " [--d --default] text\n" <<
-				 argument << " [--d --default] text text1 text2 : Multiple texts\n";
+				 argument << " [font] text\n" <<
+				 argument << " [font] text text1 text2 : Multiple texts\n----\n" <<
+				 "fonts:\n--\n" <<
+				 "[--d --default] : FFont's default font.\n" << 
+				 "[--ar --ansi_regular] : ANSI Regular font\n";
 }
 
 int main(int argc, char** argv) {	
@@ -178,12 +184,20 @@ int main(int argc, char** argv) {
         text.append(" ");
     }
     
+    FFont gen;
+    ffont_default_t default_font;
+    
 	if(font == "--d" || font == "--default") {
 		FFont_Default font;
-		FFont gen;
 
-		ffont_default_t default_font = font.Init();
-				
+		default_font = font.Init();
+		
+		gen.Generate(default_font, text);
+	} else if(font == "--ar" || font == "--ansi_regular") {
+		FFont_Ansi_Regular font;
+		
+		default_font = font.Init();
+		
 		gen.Generate(default_font, text);
 	} else { HelpFunction(argv[0]); }
 }
