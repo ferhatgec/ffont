@@ -38,6 +38,21 @@ typedef struct {
 	std::string x;
 	std::string y;
 	std::string z;
+	
+	std::string dot;
+	std::string comma;
+	std::string exclam;
+	
+	std::string one;
+	std::string two;
+	std::string three;
+	std::string four;
+	std::string five;
+	std::string six;
+	std::string seven;
+	std::string eight;
+	std::string nine;
+	std::string zero;
 } ffont_default_t;
 
 class FFont_Default {

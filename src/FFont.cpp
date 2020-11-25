@@ -143,6 +143,58 @@ FFont::Generate(ffont_default_t &font, std::string text) {
 					generated_text.append(GetSpecificLine(font.z, line) + " ");
 					break;
 				
+				case '.':
+					generated_text.append(GetSpecificLine(font.dot, line) + " ");
+					break;
+					
+				case ',':
+					generated_text.append(GetSpecificLine(font.comma, line) + " ");
+					break;
+				
+				case '!':
+					generated_text.append(GetSpecificLine(font.exclam, line) + " ");
+					break;
+				
+				case '1':
+					generated_text.append(GetSpecificLine(font.one, line) + " ");
+					break;
+				
+				case '2':
+					generated_text.append(GetSpecificLine(font.two, line) + " ");
+					break;
+				
+				case '3':
+					generated_text.append(GetSpecificLine(font.three, line) + " ");
+					break;
+					
+				case '4':
+					generated_text.append(GetSpecificLine(font.four, line) + " ");
+					break;
+					
+				case '5':
+					generated_text.append(GetSpecificLine(font.five, line) + " ");
+					break;
+				
+				case '6':
+					generated_text.append(GetSpecificLine(font.six, line) + " ");
+					break;
+				
+				case '7':
+					generated_text.append(GetSpecificLine(font.seven, line) + " ");
+					break;
+				
+				case '8':
+					generated_text.append(GetSpecificLine(font.eight, line) + " ");
+					break;
+				
+				case '9':
+					generated_text.append(GetSpecificLine(font.nine, line) + " ");
+					break;
+				
+				case '0':
+					generated_text.append(GetSpecificLine(font.zero, line) + " ");
+					break;
+					
 				case ' ':
 					generated_text.append("  ");
 					break;
