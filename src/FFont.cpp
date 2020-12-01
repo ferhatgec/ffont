@@ -131,6 +131,10 @@ FFont::Generate(ffont_default_t &font, std::string text) {
 					generated_text.append(GetSpecificLine(font.w, line) + " ");
 					break;
 				
+				case 'v':
+					generated_text.append(GetSpecificLine(font.v, line) + " ");
+					break;
+					
 				case 'x':
 					generated_text.append(GetSpecificLine(font.x, line) + " ");
 					break;
